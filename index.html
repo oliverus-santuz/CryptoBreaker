@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            background-color: #D3C188;
+            text-align: center;
+            margin: 0px;
+            justify-items: center;
+            align-items: center;
+
+        }
+        #formulario
+        {
+            justify-content: center;
+            align-content: center;
+            background-color: #111111;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            margin: 1%;
+            width: auto;
+            height: auto;
+            max-height: 100vh;
+            max-width: 35vw;
+            gap: 10px;
+            padding: 2%;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
+        }
+        form{
+            word-wrap: break-word;
+            display: flex;
+            flex-direction: column;
+           justify-content: center;
+           text-align: center;
+        }
+        .butao{
+            color: #111111;
+            font-weight: bold;
+            border-style: none;
+            margin: auto;
+            height: 8vh;
+            width: 10vw;
+            padding: 3%;
+            background-color: #C2B078;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 2.8vw;
+        }
+        .butao:hover{
+            text-decoration: underline;
+            width: 11vw;
+            height: 9vh;
+            transition-duration: 0.2s;
+        }
+        input{
+            margin: 1vw;
+            padding: 1%;
+            border-radius: 3px;
+            border-style: none;
+            color: white;
+            background-color: #333333;
+        }
+        h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 7vw;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.712);
+            margin:0px ;
+        }
+        label{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            font-size: 3vw;
+        }
+    </style>
+
+</head>
+<body>
+        <h1>Cifra de Cesar</h1> 
+    <div id="formulario">
+
+        <form action="criptografar.php" method="post">
+
+            <label for="crip">Criptografar</label>
+
+            <input name="crip" class="in" id="crip" type="text" required>
+            
+            <label for="casascrip">Deslocamento</label>
+            
+            <input name="casascrip" type="number" required>
+            
+            <input class="butao" type="submit">
+        </form>
+
+        <form method="post" action="descritografar.php" > 
+
+            <label for="crip">Descriptografar</label>
+            
+            <input name="crip" class="in" id="crip" type="text" required>
+
+            <label for="casasdescrip">Deslocamento</label>
+            
+            <input name="casascrip" class="in" id="casascrip" type="number" required>
+
+            <button class="butao" type="submit">Enviar</button>
+
+        </form> 
+    </div>
+</body>
+</html>
